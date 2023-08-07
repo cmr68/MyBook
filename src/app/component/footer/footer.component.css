@@ -1,0 +1,29 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', serif;
+}
+.footer{
+        height: 8vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+        .imgFooter_in{
+            width: 80px;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        .imgFooter{
+            width: 70px;
+            margin-right: 20px;
+        }
+        .imgFooter_tw{
+            width: 40px;
+            margin-top: 10px;
+            margin-right: 40px;
+        }
