@@ -1,10 +1,4 @@
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Libre Baskerville', serif;
-}
 .footer{
         height: 8vh;
         display: flex;
