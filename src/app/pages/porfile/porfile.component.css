@@ -1,0 +1,91 @@
+
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 82vh;
+    background-image: url("https://png.pngtree.com/background/20230427/original/pngtree-an-old-library-or-book-room-with-some-books-and-plants-picture-image_2496727.jpg");
+    border: rgb(0, 247, 58) 2px solid;
+}
+.cuadro{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 70vh;
+    background-color: rgba(245,245,220, 0.5);
+    border: 3px red solid;
+}
+/* DATOS DEL PERFIL - IZQ */
+.perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50vw;
+    height: 50vh;
+    padding: 50px;
+    border: blue 2px solid;
+}
+.cabeceraNom{
+    display: flex;
+    flex-direction: column;
+}
+img{
+    width: 300px;
+    height: 200px;
+    border-radius: 50%;
+}
+.dataGroup{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+    h3{
+        margin-bottom: 32px;
+        margin-right: 10px;
+    }
+    .datos{
+        display: flex;
+        flex-direction: column;
+    }
+    input{
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* EDITAR DATOS - DER */
+.editar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 50vh;
+    padding: 50px;
+    border: black 2px solid;
+    
+}
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20vw;
+        border-bottom: solid 5px rgb(168, 19, 19);
+    }
+    form{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+button{
+    background-color:  rgb(168, 19, 19);
+    color: rgb(253, 253, 253);
+    margin-top: 20px;
+}

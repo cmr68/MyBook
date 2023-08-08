@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormRegisterComponent } from './component/form-register/form-register.component';
 import { HomeComponent } from './pages/home/home.component';
+import { PorfileComponent } from './pages/porfile/porfile.component';
 
 const routes: Routes = [
   {path: "home", component: HomeComponent},
-  {path: "form-register", component: FormRegisterComponent}
+  {path: "form-register", component: FormRegisterComponent},
+  {path: "profile", component: PorfileComponent}
 ];
 
 @NgModule({

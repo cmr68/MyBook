@@ -9,15 +9,17 @@
     align-items: center;
 }
 .imagen{
-    width: 25vh;
+    width: 28vh;
     margin-left: 50px;
+    margin-top: 20px;
 }
 .nav a{
     text-decoration: none;
     color: white;
-    font-size: 30px;
-}
-.register{
-    margin-right: 150px;
+    font-size: 20px;
     margin-left: 80px;
+}
+
+.profile{
+    margin-right: 130px;
 }
