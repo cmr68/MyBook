@@ -1,1 +1,39 @@
-<p>books works!</p>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <body>
+    
+    <div class="container">
+        <!-- ROW -->
+        <div class="row mt-5 mb-1 ms-4 me-4">
+                <div class="col-md-4" *ngFor="let book of books; let even = even">
+                    <div *ngIf="books.length === 0"> No hay libros registrados</div>
+                    <!-- Card -->
+                    <div class="card mb-3" style="width: 18rem;">
+                        <img src="{{book.photo}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="tapa">{{book.type}}</h5>
+                            <h2 class="title">{{book.title}}</h2>
+                            <p class="autor">{{book.author}}</p>
+                            <p class="ref">Ref-{{book.id_book}}</p>
+                            <h3 class="price">{{book.price}}€</h3>
+                            <a href="#" class="btn" [ngClass]="even ? 'btn-primary' : 'btn-danger'">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+
