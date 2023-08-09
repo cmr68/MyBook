@@ -15,7 +15,7 @@ export class User {
 
 
   nombreCompleto(){
-    this.nombre + this.apellido;
+    return this.nombre + " " + this.apellido;
     
   }
 }
