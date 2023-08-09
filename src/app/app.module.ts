@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { FormRegisterComponent } from './component/form-register/form-register.component';
 import { PorfileComponent } from './pages/porfile/porfile.component';
 import { FormsModule } from '@angular/forms';
+import { BooksComponent } from './component/books/books.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     HomeComponent,
     FormRegisterComponent,
-    PorfileComponent
+    PorfileComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,

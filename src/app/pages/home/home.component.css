@@ -5,6 +5,7 @@ body{
     background-size: cover;  
     background-position: center;
     height: 82vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
