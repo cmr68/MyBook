@@ -7,8 +7,7 @@ body{
     width: 100vw;
     height: 82vh;
     background-image: url("https://png.pngtree.com/background/20230427/original/pngtree-an-old-library-or-book-room-with-some-books-and-plants-picture-image_2496727.jpg");
-    border: rgb(0, 247, 58) 2px solid;
-}
+} 
 .cuadro{
     display: flex;
     flex-direction: row;
@@ -17,7 +16,7 @@ body{
     width: 80vw;
     height: 70vh;
     background-color: rgba(245,245,220, 0.5);
-    border: 3px red solid;
+    
 }
 /* DATOS DEL PERFIL - IZQ */
 .perfil{
@@ -29,7 +28,6 @@ body{
     width: 50vw;
     height: 50vh;
     padding: 50px;
-    border: blue 2px solid;
 }
 .cabeceraNom{
     display: flex;
@@ -67,7 +65,6 @@ img{
     width: 50vw;
     height: 50vh;
     padding: 50px;
-    border: black 2px solid;
     
 }
     h1{
