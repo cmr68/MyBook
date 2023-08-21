@@ -6,6 +6,7 @@ import { PorfileComponent } from './pages/porfile/porfile.component';
 import { BooksComponent } from './component/books/books.component';
 
 const routes: Routes = [
+  {path: "", component: HomeComponent},
   {path: "home", component: HomeComponent},
   {path: "books", component: BooksComponent},
   {path: "form-register", component: FormRegisterComponent},
