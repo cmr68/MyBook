@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { User } from 'src/app/models/user';
 import { Book } from 'src/app/models/book';
 
 @Component({
-  selector: 'app-books',
-  templateUrl: './books.component.html',
-  styleUrls: ['./books.component.css']
+  selector: 'app-book',
+  templateUrl: './book.component.html',
+  styleUrls: ['./book.component.css']
 })
-export class BooksComponent {
+export class BookComponent {
   public book1: Book;
   public book2: Book;
   public book3: Book;
@@ -28,3 +27,4 @@ export class BooksComponent {
     this.books.push(newBook);
   }
 }
+

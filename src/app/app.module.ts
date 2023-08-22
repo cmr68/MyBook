@@ -9,8 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { FormRegisterComponent } from './component/form-register/form-register.component';
 import { PorfileComponent } from './pages/porfile/porfile.component';
 import { FormsModule } from '@angular/forms';
-import { BooksComponent } from './component/books/books.component';
-import { CardComponent } from './component/card/card.component';
+import { BookComponent } from './pages/book/book.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +19,7 @@ import { CardComponent } from './component/card/card.component';
     HomeComponent,
     FormRegisterComponent,
     PorfileComponent,
-    BooksComponent,
-    CardComponent
+    BookComponent,
   ],
   imports: [
     BrowserModule,
