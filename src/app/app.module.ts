@@ -10,6 +10,7 @@ import { FormRegisterComponent } from './component/form-register/form-register.c
 import { PorfileComponent } from './pages/porfile/porfile.component';
 import { FormsModule } from '@angular/forms';
 import { BooksComponent } from './component/books/books.component';
+import { CardComponent } from './component/card/card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BooksComponent } from './component/books/books.component';
     HomeComponent,
     FormRegisterComponent,
     PorfileComponent,
-    BooksComponent
+    BooksComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

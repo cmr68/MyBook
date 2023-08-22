@@ -18,6 +18,7 @@ export class PorfileComponent {
     nuevoApe: HTMLInputElement,
     nuevoEmail: HTMLInputElement,
     nuevaFoto: HTMLInputElement){
+      
     this.myUser.nombre = nuevoNombre.value;
     this.myUser.apellido = nuevoApe.value;
     this.myUser.email = nuevoEmail.value;
