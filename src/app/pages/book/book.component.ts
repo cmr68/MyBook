@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Book } from 'src/app/models/book';
 
 @Component({
@@ -7,6 +7,7 @@ import { Book } from 'src/app/models/book';
   styleUrls: ['./book.component.css']
 })
 export class BookComponent {
+
   public book1: Book;
   public book2: Book;
   public book3: Book;
@@ -15,8 +16,8 @@ export class BookComponent {
 
   constructor(){
     this.book1 = new Book (0,0,"Primer libro", "Tapa blanda", "Autor1", 20, "https://correos-marketplace.ams3.cdn.digitaloceanspaces.com/prod-new/uploads/correos-marketplace-shop/1/product/42464-hypp15nz-libro-el-corazon-helado-almudena-grandes-5.jpg"),
-    this.book2 = new Book (31152,562,"Segundo libro", "Tapa blanda", "Autor2", 20, "https://correos-marketplace.ams3.cdn.digitaloceanspaces.com/prod-new/uploads/correos-marketplace-shop/1/product/42464-hypp15nz-libro-el-corazon-helado-almudena-grandes-5.jpg"),
-    this.book3 = new Book (31152,562,"Tercer libro", "Tapa blanda", "Autor3", 20, "https://correos-marketplace.ams3.cdn.digitaloceanspaces.com/prod-new/uploads/correos-marketplace-shop/1/product/42464-hypp15nz-libro-el-corazon-helado-almudena-grandes-5.jpg"),
+    this.book2 = new Book (43464,562,"Segundo libro", "Tapa blanda", "Autor2", 20, "https://correos-marketplace.ams3.cdn.digitaloceanspaces.com/prod-new/uploads/correos-marketplace-shop/1/product/42464-hypp15nz-libro-el-corazon-helado-almudena-grandes-5.jpg"),
+    this.book3 = new Book (67884,562,"Tercer libro", "Tapa blanda", "Autor3", 20, "https://correos-marketplace.ams3.cdn.digitaloceanspaces.com/prod-new/uploads/correos-marketplace-shop/1/product/42464-hypp15nz-libro-el-corazon-helado-almudena-grandes-5.jpg"),
     this.book4 = new Book (31152,562,"Cuarto libro", "Tapa blanda", "Autor3", 20, "https://correos-marketplace.ams3.cdn.digitaloceanspaces.com/prod-new/uploads/correos-marketplace-shop/1/product/42464-hypp15nz-libro-el-corazon-helado-almudena-grandes-5.jpg")
 
     this.books = [this.book1, this.book2, this.book3, this.book4];
@@ -25,6 +26,10 @@ export class BookComponent {
   public addBook(title:string,type:string,author:string,price:number,photo:string,id_book:number, id_user:number){
     let newBook = new Book(id_book,id_user,title,type,author,price,photo);
     this.books.push(newBook);
+  }
+
+  public deleteBook(deleteBook:Book):void{
+    this.books = this.books.filter(i => i.id_book !== deleteBook.id_book)
   }
 }
 
