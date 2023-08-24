@@ -1,0 +1,22 @@
+<body>
+    <!-- COLUMN -->
+<div class="containerAddBook">
+ <img src="../../../assets/fondo7.avif" alt="" class="imgFondo">
+ <div class="addBookTitle">
+     <h1>Modifica un libro</h1>
+ </div>
+ <div class="form">
+     <form action="" class="addBookForm">
+         <input type="text" #inputTitle name="title" id="title" placeholder="Título">
+         <input type="text" #inputType name="type" id="type" placeholder="Tapa blanda/dura">
+         <input type="text" #inputAuthor name="author" id="author" placeholder="Autor">
+         <input type="number" #inputPrice name="price" id="price" placeholder="Precio">
+         <input type="text" #inputPhoto name="photo" id="photo" placeholder="Foto">
+         <input type="number" #inputId_book name="id_book" id="id_book" placeholder="Id del libro">
+         <input type="number" #inputId_user name="id_user" id="id_user" placeholder="Id del usuario">
+     </form>
+     <button type="submit" (click)=updateBook(inputTitle.value,inputType.value,inputAuthor.value,inputPrice.value,inputPhoto.value,inputId_book.value,inputId_user.value)>Modificar libro</button>
+ </div>
+</div>
+
+</body>

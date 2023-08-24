@@ -1,4 +1,121 @@
+
 body {
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn-close{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+    margin-left: 280px;
+    background-color: grey;
+    border: 1px solid rgb(70, 69, 69);
+    border-radius: 50%;
+    color: white;
+    box-shadow: 1px 1px 2px black;
+}
+.btn-close:hover{
+    background-color: rgb(250, 47, 47);
+    border: 1px solid rgb(178, 0, 0);
+}
+.btn-buy{
+    margin-top: 15px;
+    width: 95px;
+    height: 45px;
+    font-size: 20px;
+    border-radius: 10%;
+}
+.btn-primary{
+    background-color: rgb(0, 96, 251);
+    color: white;
+}
+.btn-danger{
+    background-color: rgb(250, 47, 47);
+    color: white;
+}
+.btn-primary:hover, .btn-danger:hover{
+    background-color: rgb(246, 255, 0);
+    color: black;
+    border: 2px solid rgb(190, 190, 0);
+}
+
+/* TEXTO */
+h5{
+    font-size: 15px;
+}
+/* NUEVA CARD */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 320px;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+.card-img{
+    width: 290px;
+    /* height: 300px; */
+
+}
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.99s;
+  transform-style: preserve-3d;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid coral;
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+    background: linear-gradient(120deg, rgb(132, 201, 195) 30%, coral 88%,
+        bisque 40%, rgb(255, 185, 160) 78%);
+    color: rgb(255, 80, 80);
+}
+
+.flip-card-back {
+  background: linear-gradient(120deg, rgb(132, 201, 195) 30%, coral 88%,
+     bisque 40%, rgb(255, 185, 160) 78%);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+
+/* TARJETA BOOSTRAP */
+/* body {
     padding: 25px;
     width: 100vw;
     display: flex;
@@ -18,23 +135,23 @@ h5{
 h2, h3{
     font-size: 25px;
     font-weight: bold;
-}
+}*/
 
 /* AÑADIR LIBRO */
-.containerAddBook{
+/* .containerAddBook{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* height: 100vh; */
+    height: 100vh;
     position: relative;
-    z-index: 1000; 
+    z-index: 1000;  
     
-    /* background-image: url("../../../assets/fondo5.avif");
+    background-image: url("../../../assets/fondo5.avif");
     background-size: cover; 
     background-position: center top; 
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat; 
 }
     .imgFondo{
         position: absolute;
@@ -48,15 +165,14 @@ h2, h3{
         z-index: 10;
         width: 100vw;
         height: 15vh;
-        /* padding: 25px; */
+        padding: 25px; 
         text-align: center;
         border: red 2px solid;
-        /* margin-top: 30px; */
     }
     .form{
         position: relative;
         z-index: 10;
-        /* width: 100vw; */
+        width: 100vw;
         padding: 50px;
         display: flex;
         flex-direction: column;
@@ -75,3 +191,4 @@ h2, h3{
                 padding-left: 10px;
                 height: 6vh;
             }
+ */

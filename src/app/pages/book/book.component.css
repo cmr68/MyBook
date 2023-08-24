@@ -6,7 +6,15 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.bookContainer{
+    width: 100vw;
+    height: auto;
+    margin-bottom: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
 .card{
     position: relative;
     z-index: 10;
@@ -20,58 +28,54 @@ h2, h3{
     font-weight: bold;
 }
 
-/* AÑADIR LIBRO */
-.containerAddBook{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* BOTON BUSCAR */
+.input__container--variant {
+    /* background: linear-gradient(to bottom, #F3FFF9, #F3FFF9); */
+    border-radius: 30px;
+    max-width: 13em;
+    padding: 1em 1em;
+  }
+  
+  .shadow__input--variant {
+    filter: blur(25px);
+    border-radius: 30px;
+    background-color: #F3FFF9;
+    opacity: 0.5;
+  }
+  
+  .input__button__shadow--variant {
+    border-radius: 15px;
+    background-color: #ed8748;
+    padding: 10px;
+    border: none;
+  }
+  
+  .input__button__shadow--variant:hover {
+    background-color: #3C6659;
+  }
+  
+  .input__search--variant {
+    width: 13em;
     align-items: center;
-    width: 100%;
-    /* height: 100vh; */
-    position: relative;
-    z-index: 1000; 
-    
-    /* background-image: url("../../../assets/fondo5.avif");
-    background-size: cover; 
-    background-position: center top; 
-    background-repeat: no-repeat; */
-}
-    .imgFondo{
-        position: absolute;
-        z-index: 0.99;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-    .addBookTitle{
-        position: relative;
-        z-index: 10;
-        width: 100vw;
-        height: 15vh;
-        /* padding: 25px; */
-        text-align: center;
-        border: red 2px solid;
-        /* margin-top: 30px; */
-    }
-    .form{
-        position: relative;
-        z-index: 10;
-        /* width: 100vw; */
-        padding: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-        border: blue 2px solid;
-    }
-        .addBookForm{
-            display: flex;
-            flex-direction: column;
-            width: 500px;
-        }
-            .addBookForm input{
-                margin: 8px;
-                padding-left: 10px;
-                height: 6vh;
-            }
+    border-radius: 13em;
+    outline: none;
+    border: none;
+    padding: 0.8em;
+    font-size: 1.2em;
+    color: #002019;
+    background-color: transparent;
+  }
+  
+  .input__search--variant::placeholder {
+    color: #002019;
+    opacity: 0.7;
+  }
+  
+  .input__container--variant {
+    /* background: linear-gradient(to bottom, #F3FFF9, #F3FFF9); */
+    border-radius: 1.5em;
+    max-width: 14em;
+    padding: 1em;
+    box-shadow: 0em 1em 3em #f4d5ba86;
+  }
+  
