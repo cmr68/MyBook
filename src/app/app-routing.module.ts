@@ -6,6 +6,7 @@ import { PorfileComponent } from './pages/porfile/porfile.component';
 import { BookComponent } from './pages/book/book.component';
 import { AddBookComponent } from './pages/add-book/add-book.component';
 import { UpdateBookComponent } from './pages/update-book/update-book.component';
+import { FormLoginComponent } from './pages/form-login/form-login.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: "addBook", component: AddBookComponent},
   {path: "updateBook", component: UpdateBookComponent},
   {path: "form-register", component: FormRegisterComponent},
+  {path: "form-login", component: FormLoginComponent},
   {path: "user", component: PorfileComponent}
 ];
 
