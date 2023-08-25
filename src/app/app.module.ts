@@ -30,6 +30,7 @@ import { MyPipePipe } from './pipes/my-pipe.pipe';
     UpdateBookComponent,
     FormLoginComponent,
     MyPipePipe,
+    
   ],
   imports: [
     BrowserModule,

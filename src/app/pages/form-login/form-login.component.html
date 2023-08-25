@@ -1,1 +1,50 @@
-<!-- <form #userForm="ngForm" (ngSumit)="onSumit(userForm)"></form> -->
+<div class="contenido">
+    <div class="main">
+        <form class= "mb-4" #userForm="ngForm" (ngSumit)="onSubmit(userForm)">
+            <div class="form-group mt-4">
+                <label >Name</label>
+                <input type="text" name="name" class="form-control" style="width: 250px;" [(ngModel)]="user.nombre" #nameId="ngModel"
+                [ngClass]="{'is-invalid' : (nameId.dirty || nameId.touched) && nameId.invalid}" required>
+                <div *ngIf="(nameId.dirty || nameId.touched) && nameId.invalid" class="invalid-feedback">
+                    <p *ngIf="nameId.errors.required">El nombre es obligatorio</p>
+                </div>
+            </div>
+        
+           <div class= "form-group mt-4">
+                <label >Email</label>
+                <input type="email" name="email" class="form-control" [(ngModel)]="user.email" style="width: 250px;" #emailId="ngModel"
+                [ngClass]="{'is-invalid' : (emailId.dirty || emailId.touched) && emailId.invalid}" email required>
+                <div *ngIf="(emailId.dirty || emailId.touched) && emailId.invalid" class="invalid-feedback">
+                    <div *ngIf="emailId.errors.required">La dirección de email es obligatoria</div>
+                    <div *ngIf="emailId.errors.email">Dirección de email incorrecta</div>
+                </div>
+            </div>
+        
+             <div class="form-group mt-4">
+                <label >Password</label>
+                <input type="password" name="password" class="form-control" style="width: 250px;" [(ngModel)]="user.password" #passwordId="ngModel" 
+                [ngClass]="{'is-invalid': (passwordId.dirty || passwordId.touched) && passwordId.invalid}" minlength="8" required>
+                <div *ngIf="(passwordId.dirty || passwordId.touched) && passwordId.invalid" class="invalid-feedback">
+                    <div *ngIf="passwordId.errors.required">La clave es obligatoria</div>
+                    <div *ngIf="passwordId.errors.minlength">La clave debe tener al menos 8 caracteres</div>
+                </div>
+            </div>
+
+            <!-- <div class="form-group mt-4">
+                <label>Repetir Password</label>
+                <input type="password" class="form-control" style="width: 250px;" formControlName="password2" 
+                [ngClass]="{'is-invalid': (myForm.get('password2').dirty || myForm.get('password2').touched) && !myForm.get('password2').valid}">
+                <div *ngIf="!myForm.get('password2').valid" class="invalid-feedback">
+                    <div *ngIf="myForm.get('password2').errors.required">La clave es obligatoria</div>
+                    <div *ngIf="!myForm.get('password2').errors.required && myForm.get('password2').errors.noCoinciden">Las claves no coinciden</div>
+                </div>
+            </div> -->
+                    
+            <div class="form-group">
+                <button class="btn btn-danger btn-block" (click)="register()" [disabled]="userForm.invalid">Submit</button>
+            </div>
+            
+        </form>
+        
+    </div>
+</div>

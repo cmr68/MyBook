@@ -13,8 +13,9 @@ export class BookComponent {
   constructor(private myBooks: BooksService){
     this.books = this.myBooks.getAll();
   }
-  deleteBook(deleteBook:Book):void{
-    this.myBooks.delete(deleteBook.id_book);
+  deleteBook(bookToDelete:Book):void{
+    this.myBooks.delete(bookToDelete.id_book);
+    this.books = this.myBooks.getAll();
   }
 
   searchBook(search_id_book:number){
