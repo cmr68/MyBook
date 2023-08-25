@@ -14,8 +14,10 @@ import { CardComponent } from './component/card/card.component';
 import { AddBookComponent } from './pages/add-book/add-book.component';
 import { BooksService } from './shared/books.service';
 import { UpdateBookComponent } from './pages/update-book/update-book.component';
-import { FormLoginComponent } from './pages/form-login/form-login.component';
 import { MyPipePipe } from './pipes/my-pipe.pipe';
+import { RegisterComponent } from './pages/register/register.component';
+import { FormLoginComponent } from './component/form-login/form-login.component';
+import { LoginComponent } from './pages/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,8 +30,10 @@ import { MyPipePipe } from './pipes/my-pipe.pipe';
     CardComponent,
     AddBookComponent,
     UpdateBookComponent,
-    FormLoginComponent,
     MyPipePipe,
+    FormLoginComponent,
+    RegisterComponent,
+    LoginComponent,
     
   ],
   imports: [

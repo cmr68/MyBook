@@ -1,0 +1,10 @@
+.contenido{
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px rgb(253, 5, 5) solid;
+
+}
