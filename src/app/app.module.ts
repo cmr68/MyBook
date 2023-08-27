@@ -18,6 +18,7 @@ import { MyPipePipe } from './pipes/my-pipe.pipe';
 import { RegisterComponent } from './pages/register/register.component';
 import { FormLoginComponent } from './component/form-login/form-login.component';
 import { LoginComponent } from './pages/login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { LoginComponent } from './pages/login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [BooksService],
   bootstrap: [AppComponent]

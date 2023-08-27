@@ -1,8 +1,8 @@
 
 <div class="contenido">
     <div class="main">
-        <form class= "mb-4" #userForm="ngForm" (ngSumit)="onSubmit(userForm)">
-            <h1>Inicia sesión </h1>
+        <form class= "mb-4" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+                <h1>Inicia sesión </h1>
             <div class="form-group mt-4">
                 <label >Name</label>
                 <input type="text" name="name" class="form-control" style="width: 250px;" [(ngModel)]="user.nombre" #nameId="ngModel"
@@ -31,19 +31,9 @@
                     <div *ngIf="passwordId.errors.minlength">La clave debe tener al menos 8 caracteres</div>
                 </div>
             </div>
-
-            <!-- <div class="form-group mt-4">
-                <label>Repetir Password</label>
-                <input type="password" class="form-control" style="width: 250px;" formControlName="password2" 
-                [ngClass]="{'is-invalid': (myForm.get('password2').dirty || myForm.get('password2').touched) && !myForm.get('password2').valid}">
-                <div *ngIf="!myForm.get('password2').valid" class="invalid-feedback">
-                    <div *ngIf="myForm.get('password2').errors.required">La clave es obligatoria</div>
-                    <div *ngIf="!myForm.get('password2').errors.required && myForm.get('password2').errors.noCoinciden">Las claves no coinciden</div>
-                </div>
-            </div> -->
                     
             <div class="form-group">
-                <button type="submit" class="btn btn-danger btn-block" (click)="register()" [disabled]="userForm.invalid">Submit</button>
+                <button type="submit" class="btn btn-danger btn-block" [disabled]="userForm.invalid">Submit</button>
             </div>
             
         </form>
