@@ -23,7 +23,7 @@ export class BookComponent {
       this.books = [this.myBooks.getOne(search_id_book)]
     }else{
       this.myBooks.getAll();
-      this.myBooks.muestraMensaje("El id_book no se ha encontrado")
+      this.myBooks.muestraMensaje(true,`El id_book: ${search_id_book} no se ha encontrado`);
     }  
   }
 }

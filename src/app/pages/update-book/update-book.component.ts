@@ -9,17 +9,19 @@ import { BooksService } from 'src/app/shared/books.service';
 })
 export class UpdateBookComponent {
  public books: Book;
- public edit: boolean;
  constructor(public myEditBook:BooksService){}
 
  updateBook(title:string,type:string,author:string,price:number,photo:string,id_book:number, id_user:number):void{
-  let bookEd = new Book(id_book,id_user,title,type,author,price,photo);
-  this.edit = this.myEditBook.edit(bookEd);
+    let bookEd = new Book(id_book,id_user,title,type,author,price,photo);
+    let edit = this.myEditBook.edit(bookEd);
+    let mensajeOk = 'El libro ' + bookEd.title +  ' ha sido editado correctamente';
+    let mensajeKo = 'Debe indicar el numero de id del libro o poner uno existente';
 
-  if(this.edit){
-    this.myEditBook.muestraMensaje("Libro" + bookEd.title + "ha sido editado correctamente")
-  }else{
-    this.myEditBook.muestraMensaje("Libro con id:" + bookEd.id_book + "no se ha encontrado")
+    if(edit){
+      this.myEditBook.muestraMensaje(false,mensajeOk)
+    }else{
+      this.myEditBook.muestraMensaje(true,mensajeKo)
+    }
+ 
   }
- }
 }

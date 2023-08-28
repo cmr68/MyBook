@@ -53,9 +53,12 @@ export class BooksService {
     return this.books.length < initialLength;
   }
 
-  muestraMensaje(mensajeOk:string){
-    this.toastr.success(mensajeOk);
-    this.toastr.error("Erorr");
+  muestraMensaje(error:boolean, mensaje:string){
+    if(error===false){
+      this.toastr.success(mensaje);
+    }else{
+      this.toastr.error(mensaje);
+    }
   }
 
 }
