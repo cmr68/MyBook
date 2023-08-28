@@ -3,6 +3,7 @@ import { BooksService } from 'src/app/shared/books.service';
 import { Book } from 'src/app/models/book';
 import { Route } from '@angular/router';
 
+
 @Component({
   selector: 'app-add-book',
   templateUrl: './add-book.component.html',
@@ -16,5 +17,6 @@ export class AddBookComponent{
     let newBook = new Book(id_book,id_user,title,type,author,price,photo);
     this.bookService.add(newBook);
     this.bookService.muestraMensaje("El libro " + newBook.title + " ha sido añadido correctamente")
+    
   }
 }

@@ -18,6 +18,7 @@ import { MyPipePipe } from './pipes/my-pipe.pipe';
 import { RegisterComponent } from './pages/register/register.component';
 import { FormLoginComponent } from './component/form-login/form-login.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { LoginComponent } from './pages/login/login.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [BooksService],
   bootstrap: [AppComponent]
