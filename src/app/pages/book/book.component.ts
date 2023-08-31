@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
 import { Respuesta } from 'src/app/models/respuesta';
@@ -8,53 +8,47 @@ import { Respuesta } from 'src/app/models/respuesta';
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.css']
 })
-export class BookComponent {
-  public books: Book[];
+export class BookComponent{
+  public books: Book [];
 
   constructor(private myBookService: BooksService){
-    this.myBookService.getAll().subscribe((resp:Respuesta) =>{
-      console.log(resp);
-      if(resp.error){
+    this.myBookService.getAll().subscribe((data:Respuesta) =>{
+      console.log(data);
+      if(data.error){
         this.myBookService.muestraMensaje(true,"No hay libros registrados")
       }else{
-        this.books = [resp.data];
+        this.books = data.data;
       } 
     });
-    // this.books = this.myBookService.getAll();
   }
 
-  // deleteBook(bookToDelete:Book):void{
-  //   this.myBookService.delete(bookToDelete.id_book);
-  //   this.books = this.myBookService.getAll();
-  // }
-
   deleteBook(bookToDelete:number):void{
+    console.log("numero id para delete: ",bookToDelete);
+    
     this.myBookService.delete(bookToDelete).subscribe((resp:Respuesta)=>{
       if(resp.error){
-        this.myBookService.muestraMensaje(true,"El libro no existe")
+        this.myBookService.muestraMensaje(true,"El libro no existe");
+        console.log("entra en error deleteBook de book.component.ts");
+        
       }else{
-        this.books = [resp.data];
+        this.books = resp.data;
+        console.log("entra en else deleteBook de book.component.ts",this.books);
       }
     })
   }
 
-  // searchBook(search_id_book:number){
-  //   if(this.myBookService.getOne(search_id_book)){
-  //     this.books = [this.myBookService.getOne(search_id_book)]
-  //   }else{
-  //     this.myBookService.getAll();
-  //     this.myBookService.muestraMensaje(true,`El id_book: ${search_id_book} no se ha encontrado`);
-  //   }  
-  // }
-
   searchBook(search_id_book:number){
-    this.myBookService.getOne(search_id_book).subscribe((resp:Respuesta)=>{
-      if(resp.error){
-        this.myBookService.muestraMensaje(true,"El libro no existe")
-      }else{
-        this.books = [resp.data];
-      }
-    });
+    console.log("num search_id: ", search_id_book);
+    
+    if(search_id_book){
+      this.myBookService.getOne(search_id_book).subscribe((data:Respuesta)=>{
+        this.books = [data.data_book];
+      });
+    }else{
+      this.myBookService.getAll().subscribe((data:Respuesta)=>{
+        this.books = data.data;
+      });
+    }
   }
 }
 

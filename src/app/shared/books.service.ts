@@ -19,10 +19,6 @@ export class BooksService {
       // new Book (31152,562,"Cuarto libro", "Tapa blanda", "Autor3", 20, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRigg5lNzYrLCaKM24Vvbwj9dnWsKR63lUiPQ&usqp=CAU")
     ];
    }
-  //Antes del API REST
-  // getAll(): Book[]{
-  //   return this.books;
-  // }
   
   //Get API REST
   getAll():Observable<Object>{
@@ -30,43 +26,23 @@ export class BooksService {
   }
 
   getOne(id_libro: number):Observable<Object>{
-    return this.http.get(this.url + id_libro);
+    console.log("id_libro de getOne en service: ",id_libro);
+    console.log("enlace: ", this.url +"/"+ id_libro);
+    
+    return this.http.get(this.url +"/"+ id_libro);
   }
-  // getOne(id_libro: number):Observable<Object>{
-  //   let oneBook:Book = this.books.find(book => book.id_book == id_libro);
-  //   return oneBook; 
-  // }
 
-  // add(newbook: Book): void{
-  //   this.books.push(newbook);
-  // }
-  
   //post API REST
   addBook(newbook: Book):Observable<Object>{
     return this.http.post(this.url,newbook);
   }
 
-  // edit(editBook: Book): boolean{
-  //   let bool = false;
-  //   let updateBook = this.books.map(book => 
-  //     book.id_book === editBook.id_book ? editBook : book);
-    
-  //   if(updateBook !== this.books){
-  //     this.books = updateBook;
-  //     bool = true;
-  //   }
-  //   return bool;
-  // }
 
   edit(editBook: Book):Observable<Object>{
+    console.log("entra en bookService.edit");
     return this.http.put(this.url,editBook);
   }
 
-  // delete(deleteBook: number): boolean{
-  //   let initialLength = this.books.length;
-  //   this.books = this.books.filter(book => book.id_book !== deleteBook);
-  //   return this.books.length < initialLength;
-  // }
   delete(deleteBook: number): Observable<Object>{
     return this.http.request('delete', this.url, {body:{id_book:deleteBook}});
   }
