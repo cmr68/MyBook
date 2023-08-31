@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,7 +36,7 @@ import { ToastrModule } from 'ngx-toastr';
     MyPipePipe,
     FormLoginComponent,
     RegisterComponent,
-    LoginComponent,
+    LoginComponent
     
   ],
   imports: [
@@ -43,7 +44,9 @@ import { ToastrModule } from 'ngx-toastr';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    HttpClientModule
+    
   ],
   providers: [BooksService],
   bootstrap: [AppComponent]
