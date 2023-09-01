@@ -10,7 +10,7 @@
       </div>
 
    <div class="bookContainer">
-        <div *ngIf="books.length === 0"> No hay libros registrados</div>
+        <!-- <div *ngIf="books.length === 0"> No hay libros registrados</div> -->
         <ng-container *ngFor="let book of books; let even = even">
             <app-card [bookFather] = "book" [even] = "even" (deleteBook) = "deleteBook($event)"></app-card>
         </ng-container>

@@ -22,10 +22,10 @@ export class BookComponent{
     });
   }
 
-  deleteBook(bookToDelete:number):void{
-    console.log("numero id para delete: ",bookToDelete);
+  deleteBook(id_book:number):void{
+    console.log("numero id para delete: ",id_book);
     
-    this.myBookService.delete(bookToDelete).subscribe((resp:Respuesta)=>{
+    this.myBookService.delete(id_book).subscribe((resp:Respuesta)=>{
       if(resp.error){
         this.myBookService.muestraMensaje(true,"El libro no existe");
         console.log("entra en error deleteBook de book.component.ts");
@@ -37,12 +37,11 @@ export class BookComponent{
     })
   }
 
-  searchBook(search_id_book:number){
-    console.log("num search_id: ", search_id_book);
-    
+  searchBook(search_id_book:number){    
     if(search_id_book){
       this.myBookService.getOne(search_id_book).subscribe((data:Respuesta)=>{
         this.books = [data.data_book];
+        
       });
     }else{
       this.myBookService.getAll().subscribe((data:Respuesta)=>{
