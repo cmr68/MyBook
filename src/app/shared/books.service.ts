@@ -12,12 +12,7 @@ export class BooksService {
   private url = "http://localhost:4000/books"
   constructor(private toastr: ToastrService, private http: HttpClient) {
     
-    this.books = [
-      // new Book (10,0,"Primer libro", "Tapa blanda", "Autor1", 20, ""),
-      // new Book (43464,562,"Segundo libro", "Tapa blanda", "Autor2", 20, "https://correos-marketplace.ams3.cdn.digitaloceanspaces.com/prod-new/uploads/correos-marketplace-shop/1/product/42464-hypp15nz-libro-el-corazon-helado-almudena-grandes-5.jpg"),
-      // new Book (67884,562,"Tercer libro", "Tapa blanda", "Autor3", 20, ""),
-      // new Book (31152,562,"Cuarto libro", "Tapa blanda", "Autor3", 20, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRigg5lNzYrLCaKM24Vvbwj9dnWsKR63lUiPQ&usqp=CAU")
-    ];
+    this.books = [];
    }
   
   //Get API REST
@@ -37,14 +32,12 @@ export class BooksService {
     return this.http.post(this.url,newbook);
   }
 
-
   edit(editBook: Book):Observable<Object>{
-    console.log("entra en bookService.edit");
     return this.http.put(this.url,editBook);
   }
 
-  delete(deleteBook: number): Observable<Object>{
-    return this.http.request('delete', this.url, {body:{id_book:deleteBook}});
+  delete(id_book: number): Observable<Object>{
+    return this.http.request('delete', this.url, {body:{id_book:id_book}});
   }
 
   muestraMensaje(error:boolean, mensaje:string){
