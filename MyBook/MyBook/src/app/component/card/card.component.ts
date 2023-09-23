@@ -8,13 +8,13 @@ import { Book } from 'src/app/models/book';
 })
 export class CardComponent {
   //PADRE-HIJO
-  @Output() deleteBook = new EventEmitter<Book>();
+  @Output() deleteBook = new EventEmitter<Number>();
   @Input() bookFather: Book;
   @Input() even: boolean;
 
   constructor(){}
   deleteBookEvent(){
-    this.deleteBook.emit(this.bookFather);
+    this.deleteBook.emit(this.bookFather.id_book);
   }
   ngOnInit():void{}
   

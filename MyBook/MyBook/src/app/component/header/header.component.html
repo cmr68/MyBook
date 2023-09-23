@@ -7,13 +7,13 @@
         <nav class="nav">
             <img class="imagen" src="../../../assets/titulo.png" alt="">
             <div class="enlaces">
-                <a routerLink="/home" class="home">Home</a>
-                <a routerLink="/books" class="books">Books</a>
-                <a routerLink="/addBook" class="addBook">AddBook</a>
-                <a routerLink="/updateBook" class="addBook">UpdateBook</a>
-                <a routerLink="/form-register" class="register">Register</a>
-                <a routerLink="/form-login" class="login">Login</a>
-                <a routerLink="/user" class="profile">User</a>
+                <a *ngIf="!isLoggedIn" routerLink="/home" class="home" routerLinkActive="active">Home</a>
+                <a *ngIf="isLoggedIn" routerLink="/books" class="books" routerLinkActive="active">Books</a>
+                <a *ngIf="isLoggedIn" routerLink="/addBook" class="addBook" routerLinkActive="active">AddBook</a>
+                <a *ngIf="isLoggedIn" routerLink="/updateBook" class="addBook" routerLinkActive="active">UpdateBook</a>
+                <a *ngIf="!isLoggedIn" routerLink="/form-register" class="register" routerLinkActive="active">Register</a>
+                <a *ngIf="!isLoggedIn" routerLink="/form-login" class="login" routerLinkActive="active">Login</a>
+                <a *ngIf="isLoggedIn" routerLink="/user" class="profile" routerLinkActive="active">User</a>
             </div>
         </nav>
     </body>

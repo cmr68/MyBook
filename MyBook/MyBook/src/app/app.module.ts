@@ -20,6 +20,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { FormLoginComponent } from './component/form-login/form-login.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
+import { UserService } from './shared/user.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import { ToastrModule } from 'ngx-toastr';
     HttpClientModule
     
   ],
-  providers: [BooksService],
+  providers: [BooksService,UserService], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

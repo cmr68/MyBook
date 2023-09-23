@@ -3,18 +3,18 @@
     <div class="main">
         <form class= "mb-4" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
                 <h1>Inicia sesión </h1>
-            <div class="form-group mt-4">
+            <!-- <div class="form-group mt-4">
                 <label >Name</label>
                 <input type="text" name="name" class="form-control" style="width: 250px;" [(ngModel)]="user.nombre" #nameId="ngModel"
                 [ngClass]="{'is-invalid' : (nameId.dirty || nameId.touched) && nameId.invalid}" required>
                 <div *ngIf="(nameId.dirty || nameId.touched) && nameId.invalid" class="invalid-feedback">
                     <p *ngIf="nameId.errors.required">El nombre es obligatorio</p>
                 </div>
-            </div>
+            </div> -->
         
            <div class= "form-group mt-4">
                 <label >Email</label>
-                <input type="email" name="email" class="form-control" [(ngModel)]="user.email" style="width: 250px;" #emailId="ngModel"
+                <input type="email" name="email" class="form-control" [(ngModel)]="myUser.email" style="width: 250px;" #emailId="ngModel"
                 [ngClass]="{'is-invalid' : (emailId.dirty || emailId.touched) && emailId.invalid}" email required>
                 <div *ngIf="(emailId.dirty || emailId.touched) && emailId.invalid" class="invalid-feedback">
                     <div *ngIf="emailId.errors.required">La dirección de email es obligatoria</div>
@@ -24,7 +24,7 @@
         
              <div class="form-group mt-4">
                 <label >Password</label>
-                <input type="password" name="password" class="form-control" style="width: 250px;" [(ngModel)]="user.password" #passwordId="ngModel" 
+                <input type="password" name="password" class="form-control" style="width: 250px;" [(ngModel)]="myUser.password" #passwordId="ngModel" 
                 [ngClass]="{'is-invalid': (passwordId.dirty || passwordId.touched) && passwordId.invalid}" minlength="8" required>
                 <div *ngIf="(passwordId.dirty || passwordId.touched) && passwordId.invalid" class="invalid-feedback">
                     <div *ngIf="passwordId.errors.required">La clave es obligatoria</div>

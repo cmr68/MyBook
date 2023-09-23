@@ -4,20 +4,15 @@
         <div class="perfil">
             <img src="" alt="" class="imgPerfil">
             <div class="cabeceraNom">
-                <img id="fotoPerfil" src="{{myUser.photo}}" alt="" class="imgNom">
+                <img id="fotoPerfil" src="{{myUser.foto}}" alt="" class="imgNom">
                 
                     <!-- PREGUNTAR PORQUÉ NO SALE -->
                     <!-- <h2>{{myUser.nombre + ' ' + myUser.apellido}}</h2> -->
-                    <h2>{{myUser.nombreCompleto()}}</h2>
+                    <!-- <h2>{{myUser.nombreCompleto()}}</h2> -->
                 
             </div>
             <!-- Mostrar datos con cajas input -->
             <div class="dataGroup">
-                <div class="info">
-                    <h3>Nombre</h3>
-                    <h3>Apellido</h3>
-                    <h3>Correo</h3>
-                </div>
                 <div class="datos">
                     <input type="text" [value]="myUser.nombre">
                     <input type="text" [value]="myUser.apellido">

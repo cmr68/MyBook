@@ -11,6 +11,15 @@
               El nombre es necesario
             </div>   
           </div>      
+
+          <div class="form-group ">
+            <label>Apellido</label>
+            <input type="text" class="form-control"  style="width: 250px;" formControlName="apellido"
+            [ngClass]="{'is-invalid': (myForm.get('apellido').dirty || myForm.get('apellido').touched) && !myForm.get('apellido').valid}">
+            <div *ngIf="!myForm.get('apellido').valid" class="invalid-feedback">
+              El apellido es necesario
+            </div>   
+          </div>  
           
           <div class="form-group">
             <label>Email</label>
@@ -21,7 +30,16 @@
               <div *ngIf="myForm.get('email').errors.email">Dirección email incorrecta</div>
             </div>
           </div>
-        
+
+          <div class="form-group ">
+            <label>Foto</label>
+            <input type="text" class="form-control"  style="width: 250px;" formControlName="foto"
+            [ngClass]="{'is-invalid': (myForm.get('foto').dirty || myForm.get('foto').touched) && !myForm.get('foto').valid}">
+            <div *ngIf="!myForm.get('foto').valid" class="invalid-feedback">
+              La foto es necesaria
+            </div>   
+          </div> 
+
           <div class="form-group">
             <label>Password</label>
             <input  type="password" class="form-control"  style="width: 250px;" formControlName="password"

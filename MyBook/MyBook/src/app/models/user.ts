@@ -1,15 +1,20 @@
 export class User {
-    public nombre:string;
-    public apellido:string;
-    public email:string;
-    public photo:string;
-    public password:string;
-
-  constructor(nombre:string, apellido:string, email:string, photo:string, password:string){
+              public id_user: number;
+              public nombre:string;
+              public apellido:string;
+              public email:string;
+              public foto:string;
+              public password:string
+  constructor(
+               nombre:string,
+               apellido:string,
+               email:string,
+               foto:string,
+               password:string){
     this.nombre = nombre;
     this.apellido = apellido;
     this.email = email;
-    this.photo = photo;
+    this.foto = foto;
     this.password = password;
   }
 

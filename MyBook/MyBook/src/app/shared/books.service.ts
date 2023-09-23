@@ -16,15 +16,15 @@ export class BooksService {
    }
   
   //Get API REST
-  getAll():Observable<Object>{
-    return this.http.get(this.url);
+  getAll(id_user:number):Observable<Object>{
+    // http://localhost:4000/books?id_user=1
+    return this.http.get(this.url+"?id_user="+id_user);
   }
 
-  getOne(id_libro: number):Observable<Object>{
-    console.log("id_libro de getOne en service: ",id_libro);
-    console.log("enlace: ", this.url +"/"+ id_libro);
-    
-    return this.http.get(this.url +"/"+ id_libro);
+  getOne(id_user:number, id_book: number):Observable<Object>{
+    console.log("id_libro de getOne en service: ",id_book);
+    // http://localhost:4000/books?id_user=1&id_book=7
+    return this.http.get(this.url+"?id_user="+id_user+"&id_book="+id_book);
   }
 
   //post API REST
@@ -37,6 +37,8 @@ export class BooksService {
   }
 
   delete(id_book: number): Observable<Object>{
+    console.log(id_book);
+    
     return this.http.request('delete', this.url, {body:{id_book:id_book}});
   }
 

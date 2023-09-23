@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { Respuesta } from 'src/app/models/respuesta';
 import { BooksService } from 'src/app/shared/books.service';
+import { UserService } from 'src/app/shared/user.service';
 
 @Component({
   selector: 'app-update-book',
@@ -11,24 +12,24 @@ import { BooksService } from 'src/app/shared/books.service';
 export class UpdateBookComponent implements OnInit{
  public books: Book[];
 
- constructor(public myEditBookService:BooksService){}
+ constructor(public bookService:BooksService, private userService:UserService){}
   
   ngOnInit(): void {
   }
 
- updateBook(title:string,type:string,author:string,price:number,photo:string,id_book:number, id_user:number):void{
-    let bookEd = new Book(id_book,id_user,title,type,author,price,photo);
+ updateBook(title:string,type:string,author:string,price:number,photo:string,id_book:number):void{
+    let bookEd = new Book(id_book,this.userService.user.id_user,title,type,author,price,photo);
     let mensajeOk = 'El libro ' + bookEd.title +  ' ha sido editado correctamente';
     let mensajeKo = 'Debe indicar el numero de id del libro o poner uno existente';
     console.log("bookEd: ",bookEd);
     
-    this.myEditBookService.edit(bookEd).subscribe((data:Respuesta)=>{
+    this.bookService.edit(bookEd).subscribe((data:Respuesta)=>{
       if(!data.error){
         console.log("libro editado", data);
-        this.myEditBookService.muestraMensaje(false,mensajeOk);
+        this.bookService.muestraMensaje(false,mensajeOk);
       }else{
         console.log("error al editar");
-        this.myEditBookService.muestraMensaje(true,mensajeKo);
+        this.bookService.muestraMensaje(true,mensajeKo);
       }
     })
  
