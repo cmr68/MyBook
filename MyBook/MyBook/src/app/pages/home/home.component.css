@@ -4,8 +4,8 @@ body{
     background-image: url("https://png.pngtree.com/background/20230427/original/pngtree-an-old-library-or-book-room-with-some-books-and-plants-picture-image_2496727.jpg");
     background-size: cover;  
     background-position: center;
-    height: 90vh;
-    width: 100%;
+    height: 87vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
